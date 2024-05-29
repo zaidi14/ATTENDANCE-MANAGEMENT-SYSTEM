@@ -1,0 +1,51 @@
+.form-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6617cb;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.drop {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    background: white;
+}
+
+textarea {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 120px;
+    width: 100%;
+}
+
+.form-group input:hover {
+    background-color: gainsboro
+}
+
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    color: #777;
+  }

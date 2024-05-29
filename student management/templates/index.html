@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+Student
+{% endblock title %}
+{% block home %}
+menu-active
+{% endblock home %}
+
+{% block body %}
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <!-- Chat interface -->
+        <div id="chatbot-logo" onclick="toggleChatbot()">
+            <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="Chatbot Logo">
+            <div class="tooltip">Ask Me To Do Something</div>
+        </div>
+        <div id="chatbot-container" class="hidden">
+            <div id="chatbot-box" class="chat-box">
+                <!-- Bot responses and user messages will be displayed here -->
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message..." autofocus>
+            <button id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="credits">
+            <br>
+            PROJECT SPRING 2024 <a href="/">DBMS</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!-- Link to the external JavaScript file -->
+<script src="{{ url_for('static', filename='assets/js/chatbot.js') }}"></script>
+
+{% endblock body %}

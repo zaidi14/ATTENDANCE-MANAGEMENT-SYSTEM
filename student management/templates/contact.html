@@ -1,0 +1,29 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block body %}
+<section class="contact-form-container">
+    <img src="static/images/bg1.jpg" alt="BACKGROUND PIC" class="contact-img"> <!-- background IMAGE for contact --> 
+    <form class="contact-form" id="main-form" action="{{ url_for('submit_contact_form') }}" method="post">
+        <h3>Connect</h3>
+        {{ form.csrf_token }} <!-- Include CSRF token -->
+        <div class="form-group">
+            {{ form.name.label }} <!-- Render name field label -->
+            {{ form.name(class="form-control", placeholder="Your name", required="required") }} <!-- Render name input field -->
+        </div>
+        <div class="form-group">
+            {{ form.email.label }} <!-- Render email field label -->
+            {{ form.email(class="form-control", placeholder="Email ID", required="required") }} <!-- Render email input field -->
+        </div>
+        <div class="form-group">
+            {{ form.message.label }} <!-- Render message field label -->
+            {{ form.message(class="form-control", rows="4", placeholder="How can I help you?", required="required") }} <!-- Render message textarea -->
+        </div>
+        <button type="submit" class="btn-secondary">Submit</button>
+    </form>
+</section>
+<!-- Contact Form Container Ends Here -->
+{% endblock body %}
